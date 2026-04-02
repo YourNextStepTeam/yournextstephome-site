@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take our free home readiness assessment to find out if you're prepared for your next move in Pierce County, WA. Get personalized guidance from Becca Pitts.">
+    <meta name="keywords" content="home buying readiness, Pierce County WA, real estate assessment, Tacoma homes">
+    <title>Home Readiness Assessment | Your Next Step Home | Pierce County</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="How Ready Are You for Your Next Move?">
+    <meta property="og:description" content="Take our free home readiness assessment and discover your path to homeownership in Pierce County, WA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yournextstephome.com/assessment.html">
+    <meta property="og:image" content="https://yournextstephome.com/images/og-assessment.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yournextstephome.com/assessment.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%232D5016' width='32' height='32'/><path fill='%23D4A843' d='M16 4l8 6v14H8V10l8-6z'/></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Assessment-specific animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .assessment-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .progress-section {
+            margin-bottom: 2rem;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--green-900);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: var(--green-50);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-bar__fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--green-700), var(--green-500));
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+
+        .question-card {
+            animation: fadeInUp 0.5s ease;
+            margin-bottom: 2rem;
+        }
+
+        .question-card__number {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--gold-500);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--green-900);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .answer-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .answer-option {
+            padding: 1.25rem;
+            border: 2px solid var(--green-100, rgba(45, 80, 22, 0.1));
+            border-radius: 8px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--green-900);
+            position: relative;
+        }
+
+        .answer-option:hover {
+            border-color: var(--green-500);
+            background-color: rgba(45, 80, 22, 0.02);
+        }
+
+        .answer-option.selected {
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.08), rgba(212, 168, 67, 0.05));
+            border-color: var(--green-700);
+            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.1);
+        }
+
+        .answer-option.selected::before {
+            content: '';
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--green-700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .answer-option.selected::after {
+            content: '✓';
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .question-nav {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .question-nav .btn {
+            flex: 1;
+            min-width: 140px;
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .results-section.active {
+            display: block;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .results-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--green-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .result-score {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .result-score--hot {
+            background: linear-gradient(135deg, #2D5016, #1a3509);
+        }
+
+        .result-score--warm {
+            background: linear-gradient(135deg, #D4A843, #B88E30);
+        }
+
+        .result-score--future {
+            background: linear-gradient(135deg, #5B8C5A, #2D5016);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .tag--hot {
+            background-color: rgba(45, 80, 22, 0.15);
+            color: var(--green-900);
+        }
+
+        .tag--warm {
+            background-color: rgba(212, 168, 67, 0.15);
+            color: #8B6914;
+        }
+
+        .tag--future {
+            background-color: rgba(91, 140, 90, 0.15);
+            color: #3a5a39;
+        }
+
+        .result-label {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--green-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-description {
+            font-size: 1rem;
+            color: var(--green-700);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Lead Capture Form */
+        .lead-capture-form {
+            background-color: var(--cream);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .lead-capture-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--green-900);
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--green-900);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--green-100, rgba(45, 80, 22, 0.1));
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--green-700);
+            box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: var(--green-500);
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .form-error {
+            color: #d32f2f;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-error.active {
+            display: block;
+        }
+
+        /* Thank You Section */
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .thank-you-message.active {
+            display: block;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-700), var(--green-500));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            animation: slideIn 0.5s ease;
+        }
+
+        .thank-you-message h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--green-900);
+            margin-bottom: 1rem;
+        }
+
+        .thank-you-message p {
+            font-size: 1.1rem;
+            color: var(--green-700);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .thank-you-message a {
+            color: var(--green-700);
+            text-decoration: none;
+            border-bottom: 2px solid var(--gold-500);
+            transition: color 0.3s ease;
+        }
+
+        .thank-you-message a:hover {
+            color: var(--green-900);
+        }
+
+        /* Back button */
+        .btn--back {
+            background-color: var(--green-50);
+            color: var(--green-900);
+            border: 2px solid var(--green-200, rgba(45, 80, 22, 0.2));
+        }
+
+        .btn--back:hover {
+            background-color: var(--green-100, rgba(45, 80, 22, 0.1));
+            border-color: var(--green-700);
+        }
+
+        /* Loading state */
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 640px) {
+            .assessment-container {
+                padding: 1.5rem 1rem;
+            }
+
+            .question-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .answer-option {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .question-nav {
+                gap: 0.75rem;
+            }
+
+            .question-nav .btn {
+                min-width: 100px;
+                font-size: 0.9rem;
+                padding: 0.75rem 1rem;
+            }
+
+            .result-card {
+                padding: 1.5rem;
+            }
+
+            .result-score {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav__inner">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" fill="#2D5016" rx="4"/>
+                        <path d="M20 8L28 14V28H12V14L20 8Z" fill="#D4A843"/>
+                    </svg>
+                    <span>Your Next Step Home</span>
+                </a>
+            </div>
+
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+
+                <li class="nav__dropdown">
+                    <button class="nav__dropdown-btn" aria-expanded="false" aria-haspopup="true">
+                        Neighborhoods
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 11L3 6H13L8 11Z"/>
+                        </svg>
+                    </button>
+                    <ul class="nav__dropdown-menu">
+                        <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                        <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="assessment.html" class="active">Assessment</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn btn--primary btn--sm">Get Started</a></li>
+            </ul>
+
+            <button class="nav__toggle" aria-expanded="false" aria-controls="nav-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div id="nav-mobile" class="nav__mobile" hidden>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn btn--primary btn--block">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero--centered">
+        <div class="hero__bg"></div>
+        <div class="hero__content">
+            <h1>How Ready Are You for Your Next Move?</h1>
+            <p class="hero__subtitle">Take our free 12-question assessment to discover where you stand in your home buying or selling journey. Get personalized insights in just a few minutes.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="section">
+        <div class="assessment-container">
+            <!-- Assessment View -->
+            <div id="assessment-view">
+                <!-- Progress Section -->
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span id="progress-text">Question 1 of 12</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar__fill" id="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="glass-card question-card" id="question-card" role="region" aria-live="polite" aria-label="Assessment Question">
+                    <span class="question-card__number" id="question-number">Question 1</span>
+                    <h2 id="question-text"></h2>
+                    <div class="answer-options" id="answer-options" role="group"></div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="question-nav">
+                    <button id="btn-back" class="btn btn--back" style="display: none;">Back</button>
+                    <button id="btn-next" class="btn btn--primary btn--lg" style="flex: 1;">Next</button>
+                </div>
+            </div>
+
+            <!-- Results View -->
+            <div id="results-view" class="results-section">
+                <div class="results-header">
+                    <h2>Your Assessment Results</h2>
+                    <p>See where you stand on your home journey.</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-score" id="result-score"></div>
+                    <span class="tag" id="result-tag"></span>
+                    <div class="result-label" id="result-label"></div>
+                    <p class="result-description" id="result-description"></p>
+                </div>
+
+                <!-- Lead Capture Form -->
+                <form class="lead-capture-form" id="lead-form">
+                    <h3>Let's Get You Connected</h3>
+                    <p style="color: var(--green-700); margin-bottom: 1rem; font-size: 0.95rem;">Share your information and Becca will reach out with next steps tailored to your situation.</p>
+
+                    <div class="form-group">
+                        <label for="form-name">Full Name</label>
+                        <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                        <div class="form-error" id="error-name"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-email">Email Address</label>
+                        <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+                        <div class="form-error" id="error-email"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-phone">Phone Number</label>
+                        <input type="tel" id="form-phone" name="phone" placeholder="(253) 555-0100" required>
+                        <div class="form-error" id="error-phone"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--lg form-submit" id="form-submit">Send My Results</button>
+                </form>
+
+                <button id="btn-retake" class="btn btn--outline btn--block">Retake Assessment</button>
+            </div>
+
+            <!-- Thank You View -->
+            <div id="thank-you-view" class="thank-you-message">
+                <div class="checkmark">✓</div>
+                <h2>Thank You!</h2>
+                <p>We have received your assessment results. Becca will review your responses and reach out within 24 hours with personalized next steps for your home journey.</p>
+                <p><a href="index.html">Return to Home</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <h3>Your Next Step Home</h3>
+                <p class="footer__desc">Becca Pitts, Realtor in Pierce County, WA. Specializing in Tacoma and Bonney Lake homes.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assessment.html">Assessment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__links">
+                <h4>Areas Served</h4>
+                <ul>
+                    <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                    <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Your Next Step Home. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://yournextstephome.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Assessment",
+                "item": "https://yournextstephome.com/assessment.html"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Quiz",
+        "name": "Home Readiness Assessment",
+        "description": "A free 12-question assessment to determine your home buying or selling readiness in Pierce County, WA",
+        "url": "https://yournextstephome.com/assessment.html"
+    }
+    </script>
+
+    <!-- Main JavaScript -->
+    <script>
+        // Assessment Data
+        const assessmentQuestions = [
+            {
+                id: 1,
+                question: "How soon are you looking to buy or sell a home?",
+                answers: [
+                    { text: "Within the next 3 months", points: 10 },
+                    { text: "In 3 to 6 months", points: 7 },
+                    { text: "In 6 to 12 months", points: 5 },
+                    { text: "More than a year away or undecided", points: 2 }
+                ]
+            },
+            {
+                id: 2,
+                question: "Have you been pre-approved for a mortgage?",
+                answers: [
+                    { text: "Yes, I have a pre-approval letter", points: 10 },
+                    { text: "I am in the process of getting pre-approved", points: 7 },
+                    { text: "Not yet, but I plan to get pre-approved soon", points: 5 },
+                    { text: "I have not explored this option", points: 2 }
+                ]
+            },
+            {
+                id: 3,
+                question: "How familiar are you with the Pierce County housing market?",
+                answers: [
+                    { text: "Very familiar; I follow market trends closely", points: 9 },
+                    { text: "Somewhat familiar; I know a bit about local trends", points: 6 },
+                    { text: "Minimally familiar; I am just beginning to explore", points: 4 },
+                    { text: "Not familiar at all", points: 1 }
+                ]
+            },
+            {
+                id: 4,
+                question: "Do you have a specific neighborhood or area in mind?",
+                answers: [
+                    { text: "Yes, I have narrowed it down to specific neighborhoods", points: 10 },
+                    { text: "I have a general area or two that interest me", points: 7 },
+                    { text: "I am open to several areas and still exploring", points: 5 },
+                    { text: "I have not thought about location yet", points: 2 }
+                ]
+            },
+            {
+                id: 5,
+                question: "What is your current living situation?",
+                answers: [
+                    { text: "Renting and ready to own", points: 9 },
+                    { text: "Currently own but looking to upgrade or downsize", points: 8 },
+                    { text: "Living with family or friends temporarily", points: 6 },
+                    { text: "Comfortable in current situation but exploring options", points: 4 }
+                ]
+            },
+            {
+                id: 6,
+                question: "Have you saved for a down payment?",
+                answers: [
+                    { text: "Yes, I have enough saved for my intended purchase", points: 10 },
+                    { text: "I have saved a portion and am working toward my goal", points: 7 },
+                    { text: "I have started saving but need more time", points: 4 },
+                    { text: "I have not yet started saving for a down payment", points: 1 }
+                ]
+            },
+            {
+                id: 7,
+                question: "How would you describe your credit situation?",
+                answers: [
+                    { text: "Excellent; I am confident in my credit score", points: 10 },
+                    { text: "Good; I know my score is solid", points: 7 },
+                    { text: "Fair; there are some issues I am working to improve", points: 5 },
+                    { text: "Poor; I have significant credit challenges", points: 2 }
+                ]
+            },
+            {
+                id: 8,
+                question: "Are you working with a real estate agent?",
+                answers: [
+                    { text: "Yes, I have an agent I trust", points: 10 },
+                    { text: "I am in talks with an agent", points: 7 },
+                    { text: "I am considering reaching out to an agent", points: 5 },
+                    { text: "I have not looked into working with an agent yet", points: 2 }
+                ]
+            },
+            {
+                id: 9,
+                question: "What matters most to you in a home?",
+                answers: [
+                    { text: "I have a clear list of must-haves and preferences", points: 10 },
+                    { text: "I know most of what I want; still refining a few things", points: 7 },
+                    { text: "I have some ideas but am still exploring", points: 5 },
+                    { text: "I am not sure what to look for yet", points: 2 }
+                ]
+            },
+            {
+                id: 10,
+                question: "How do you feel about the home buying or selling process?",
+                answers: [
+                    { text: "Excited and ready to move forward", points: 10 },
+                    { text: "Positive overall; a bit nervous about some steps", points: 7 },
+                    { text: "Uncertain; I have questions and concerns", points: 4 },
+                    { text: "Overwhelmed; the process feels intimidating", points: 1 }
+                ]
+            },
+            {
+                id: 11,
+                question: "Have you attended any open houses or toured homes recently?",
+                answers: [
+                    { text: "Yes, multiple times; I am actively shopping", points: 10 },
+                    { text: "Yes, a few times to get a feel for the market", points: 7 },
+                    { text: "Once or twice, but not recently", points: 4 },
+                    { text: "No, I have not attended any open houses", points: 1 }
+                ]
+            },
+            {
+                id: 12,
+                question: "What is motivating your move?",
+                answers: [
+                    { text: "Major life change (job, family, lifestyle upgrade)", points: 10 },
+                    { text: "I am ready for a change in my current situation", points: 8 },
+                    { text: "I am curious and exploring possibilities", points: 5 },
+                    { text: "Just thinking ahead; not an immediate priority", points: 2 }
+                ]
+            }
+        ];
+
+        // State Management
+        let currentQuestion = 0;
+        let selectedAnswers = [];
+        let currentScore = 0;
+        let currentCategory = "";
+
+        // DOM Elements
+        const assessmentView = document.getElementById("assessment-view");
+        const resultsView = document.getElementById("results-view");
+        const thankYouView = document.getElementById("thank-you-view");
+        const questionCard = document.getElementById("question-card");
+        const questionNumber = document.getElementById("question-number");
+        const questionText = document.getElementById("question-text");
+        const answerOptions = document.getElementById("answer-options");
+        const btnBack = document.getElementById("btn-back");
+        const btnNext = document.getElementById("btn-next");
+        const btnRetake = document.getElementById("btn-retake");
+        const progressText = document.getElementById("progress-text");
+        const progressPercentage = document.getElementById("progress-percentage");
+        const progressFill = document.getElementById("progress-fill");
+        const leadForm = document.getElementById("lead-form");
+
+        // Initialize
+        function init() {
+            selectedAnswers = new Array(assessmentQuestions.length).fill(null);
+            currentQuestion = 0;
+            loadQuestion();
+            setupEventListeners();
+            updateNavigation();
+        }
+
+        // Load and Render Current Question
+        function loadQuestion() {
+            const question = assessmentQuestions[currentQuestion];
+
+            questionNumber.textContent = `Question ${question.id}`;
+            questionText.textContent = question.question;
+            questionText.setAttribute("tabindex", "0");
+            questionText.focus();
+
+            // Announce to screen readers
+            const announcement = `Question ${currentQuestion + 1} of ${assessmentQuestions.length}: ${question.question}`;
+            announceToScreenReader(announcement);
+
+            answerOptions.innerHTML = "";
+            question.answers.forEach((answer, index) => {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "answer-option";
+                button.textContent = answer.text;
+
+                if (selectedAnswers[currentQuestion] === index) {
+                    button.classList.add("selected");
+                }
+
+                button.addEventListener("click", () => selectAnswer(index));
+                answerOptions.appendChild(button);
+            });
+
+            updateProgress();
+            updateNavigation();
+        }
+
+        // Select Answer
+        function selectAnswer(index) {
+            selectedAnswers[currentQuestion] = index;
+
+            const buttons = answerOptions.querySelectorAll(".answer-option");
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle("selected", i === index);
+            });
+
+            announceToScreenReader(`Selected: ${assessmentQuestions[currentQuestion].answers[index].text}`);
+        }
+
+        // Update Progress Bar
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / assessmentQuestions.length) * 100;
+            progressText.textContent = `Question ${currentQuestion + 1} of ${assessmentQuestions.length}`;
+            progressPercentage.textContent = `${Math.round(progress)}%`;
+            progressFill.style.width = `${progress}%`;
+        }
+
+        // Update Navigation Buttons
+        function updateNavigation() {
+            if (currentQuestion === 0) {
+                btnBack.style.display = "none";
+            } else {
+                btnBack.style.display = "block";
+            }
+
+            if (currentQuestion === assessmentQuestions.length - 1) {
+                btnNext.textContent = "See Results";
+            } else {
+                btnNext.textContent = "Next";
+            }
+        }
+
+        // Next Question
+        function nextQuestion() {
+            if (selectedAnswers[currentQuestion] === null) {
+                announceToScreenReader("Please select an answer before continuing.");
+                return;
+            }
+
+            if (currentQuestion < assessmentQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Back Question
+        function backQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        // Calculate Score and Show Results
+        function calculateScore() {
+            let score = 0;
+            selectedAnswers.forEach((answerIndex, questionIndex) => {
+                if (answerIndex !== null) {
+                    score += assessmentQuestions[questionIndex].answers[answerIndex].points;
+                }
+            });
+            return score;
+        }
+
+        function getCategory(percentage) {
+            if (percentage >= 80) return "hot";
+            if (percentage >= 50) return "warm";
+            return "future";
+        }
+
+        function getCategoryLabel(category) {
+            const labels = {
+                hot: "Ready to Move",
+                warm: "Getting Close",
+                future: "Future Ready"
+            };
+            return labels[category];
+        }
+
+        function getCategoryMessage(category) {
+            const messages = {
+                hot: "You are ready to make your move. Let's connect and get started.",
+                warm: "You are getting close. A few more steps and you will be ready.",
+                future: "Great start on your journey. Let's build a plan to get you there."
+            };
+            return messages[category];
+        }
+
+        function showResults() {
+            const rawScore = calculateScore();
+            const maxScore = 120;
+            const percentage = Math.round((rawScore / maxScore) * 100);
+            currentScore = percentage;
+            currentCategory = getCategory(percentage);
+
+            // Update results display
+            const scoreCircle = document.getElementById("result-score");
+            const scoreTag = document.getElementById("result-tag");
+            const scoreLabel = document.getElementById("result-label");
+            const scoreDescription = document.getElementById("result-description");
+
+            scoreCircle.textContent = `${percentage}%`;
+            scoreCircle.className = `result-score result-score--${currentCategory}`;
+
+            scoreTag.textContent = getCategoryLabel(currentCategory);
+            scoreTag.className = `tag tag--${currentCategory}`;
+
+            scoreLabel.textContent = getCategoryLabel(currentCategory);
+            scoreDescription.textContent = getCategoryMessage(currentCategory);
+
+            // Show results view
+            assessmentView.style.display = "none";
+            resultsView.classList.add("active");
+
+            announceToScreenReader(`Your score is ${percentage} percent. ${getCategoryLabel(currentCategory)}.`);
+        }
+
+        // Retake Assessment
+        function retakeAssessment() {
+            selectedAnswers = new Array(assessmentQuestions.length).fill(null);
+            currentQuestion = 0;
+            currentScore = 0;
+            currentCategory = "";
+
+            assessmentView.style.display = "block";
+            resultsView.classList.remove("active");
+            thankYouView.classList.remove("active");
+
+            loadQuestion();
+            announceToScreenReader("Assessment reset. Starting from question 1.");
+        }
+
+        // Form Submission
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("form-name").value.trim();
+            const email = document.getElementById("form-email").value.trim();
+            const phone = document.getElementById("form-phone").value.trim();
+
+            let hasError = false;
+
+            // Validate form
+            if (!name) {
+                showError("error-name", "Name is required");
+                hasError = true;
+            } else {
+                hideError("error-name");
+            }
+
+            if (!email || !isValidEmail(email)) {
+                showError("error-email", "Valid email is required");
+                hasError = true;
+            } else {
+                hideError("error-email");
+            }
+
+            if (!phone) {
+                showError("error-phone", "Phone number is required");
+                hasError = true;
+            } else {
+                hideError("error-phone");
+            }
+
+            if (hasError) {
+                announceToScreenReader("Please fix the errors in the form.");
+                return;
+            }
+
+            // Disable submit button
+            const submitBtn = document.getElementById("form-submit");
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            try {
+                const payload = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    score: currentScore,
+                    category: currentCategory,
+                    answers: selectedAnswers.map((answerIndex, questionIndex) => ({
+                        question: assessmentQuestions[questionIndex].question,
+                        answer: answerIndex !== null ? assessmentQuestions[questionIndex].answers[answerIndex].text : null,
+                        points: answerIndex !== null ? assessmentQuestions[questionIndex].answers[answerIndex].points : 0
+                    }))
+                };
+
+                const response = await fetch("https://hook.us2.make.com/placeholder", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    // Show thank you view
+                    resultsView.classList.remove("active");
+                    thankYouView.classList.add("active");
+                    announceToScreenReader("Thank you! Your assessment results have been sent.");
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            } catch (error) {
+                console.error("Error submitting form:", error);
+                showError("error-name", "There was an error sending your information. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send My Results";
+            }
+        }
+
+        // Utility Functions
+        function isValidEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function showError(elementId, message) {
+            const errorEl = document.getElementById(elementId);
+            errorEl.textContent = message;
+            errorEl.classList.add("active");
+        }
+
+        function hideError(elementId) {
+            const errorEl = document.getElementById(elementId);
+            errorEl.textContent = "";
+            errorEl.classList.remove("active");
+        }
+
+        function announceToScreenReader(message) {
+            const announcement = document.createElement("div");
+            announcement.setAttribute("role", "status");
+            announcement.setAttribute("aria-live", "polite");
+            announcement.className = "sr-only";
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            setTimeout(() => announcement.remove(), 1000);
+        }
+
+        // Event Listeners
+        function setupEventListeners() {
+            btnNext.addEventListener("click", nextQuestion);
+            btnBack.addEventListener("click", backQuestion);
+            btnRetake.addEventListener("click", retakeAssessment);
+            leadForm.addEventListener("submit", handleFormSubmit);
+
+            // Keyboard navigation
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" && assessmentView.style.display !== "none") {
+                    const answerOptions = document.querySelectorAll(".answer-option");
+                    const hasSelection = Array.from(answerOptions).some(opt => opt.classList.contains("selected"));
+                    if (hasSelection && e.target.classList.contains("answer-option")) {
+                        nextQuestion();
+                    }
+                }
+            });
+
+            // Navigation dropdown
+            const dropdownBtn = document.querySelector(".nav__dropdown-btn");
+            if (dropdownBtn) {
+                dropdownBtn.addEventListener("click", function() {
+                    const isExpanded = this.getAttribute("aria-expanded") === "true";
+                    this.setAttribute("aria-expanded", !isExpanded);
+                });
+            }
+
+            // Mobile menu toggle
+            const navToggle = document.querySelector(".nav__toggle");
+            const navMobile = document.getElementById("nav-mobile");
+            if (navToggle && navMobile) {
+                navToggle.addEventListener("click", function() {
+                    const isExpanded = this.getAttribute("aria-expanded") === "true";
+                    this.setAttribute("aria-expanded", !isExpanded);
+                    navMobile.toggleAttribute("hidden");
+                });
+            }
+
+            // Nav scroll effect
+            window.addEventListener("scroll", () => {
+                const navbar = document.getElementById("navbar");
+                if (window.scrollY > 10) {
+                    navbar.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.1)";
+                } else {
+                    navbar.style.boxShadow = "none";
+                }
+            });
+        }
+
+        // Start Assessment
+        window.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
+</html>

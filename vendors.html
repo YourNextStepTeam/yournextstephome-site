@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Becca Pitts' handpicked preferred vendor network for Pierce County real estate. Quality lenders, inspectors, contractors, and more trusted by Your Next Step Home.">
+    <meta name="keywords" content="real estate vendors Pierce County, home inspectors, mortgage lenders, contractors, insurance agents, title escrow">
+    <meta name="author" content="Becca Pitts, Your Next Step Home">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Becca's Preferred Vendor Network | Your Next Step Home">
+    <meta property="og:description" content="Handpicked professionals for your real estate journey in Pierce County, Washington.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yournextstephome.com/vendors.html">
+    <meta property="og:image" content="https://yournextstephome.com/og-vendors.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Becca's Preferred Vendor Network">
+    <meta name="twitter:description" content="Quality home professionals in Pierce County, WA">
+
+    <title>Preferred Vendors | Your Next Step Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://yournextstephome.com/vendors.html">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <span class="nav__brand-text">Your Next Step Home</span>
+                </a>
+            </div>
+
+            <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav__links nav__mobile">
+                <li><a href="index.html">Home</a></li>
+
+                <li class="nav__dropdown">
+                    <button class="nav__dropdown-btn" aria-expanded="false">
+                        Neighborhoods
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <ul class="nav__dropdown-menu">
+                        <li><a href="neighborhoods.html">Browse All Neighborhoods</a></li>
+                        <li><a href="neighborhoods.html#tacoma">Tacoma</a></li>
+                        <li><a href="neighborhoods.html#puyallup">Puyallup</a></li>
+                        <li><a href="neighborhoods.html#federal-way">Federal Way</a></li>
+                        <li><a href="neighborhoods.html#gig-harbor">Gig Harbor</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="vendors.html" aria-current="page">Vendors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn btn--primary btn--lg">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero--centered" style="background: linear-gradient(135deg, rgba(45, 80, 22, 0.95) 0%, rgba(212, 168, 67, 0.1) 100%);">
+        <div class="hero__bg"></div>
+        <div class="hero__content">
+            <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; color: var(--gold-500);">Becca's Preferred Vendor Network</h1>
+            <p class="hero__subtitle" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem;">Handpicked professionals committed to exceptional service for Pierce County homebuyers and sellers.</p>
+            <div class="hero__ctas">
+                <a href="#vendors" class="btn btn--primary btn--lg">Browse Vendors</a>
+                <a href="#vendor-application" class="btn btn--outline btn--lg" style="border-color: var(--gold-500); color: var(--gold-500);">Join Our Network</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Vendor Directory Section -->
+        <section class="section" id="vendors">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 0.5rem;">Who Does Becca Trust with Your Biggest Investment?</h2>
+                    <p style="color: var(--green-700); font-size: 1.1rem;">Each vendor has earned Becca's recommendation through consistent excellence and integrity.</p>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="vendor-filter" role="group" aria-label="Filter vendors by category">
+                    <button class="active" data-filter="all">All Vendors</button>
+                    <button data-filter="lenders">Lenders</button>
+                    <button data-filter="inspectors">Inspectors</button>
+                    <button data-filter="contractors">Contractors</button>
+                    <button data-filter="insurance">Insurance</button>
+                    <button data-filter="title-escrow">Title/Escrow</button>
+                    <button data-filter="moving">Moving</button>
+                    <button data-filter="cleaning">Cleaning</button>
+                </div>
+
+                <!-- Vendor Cards Grid -->
+                <div class="grid grid--3" style="margin-top: 3rem;">
+                    <!-- LENDERS -->
+                    <div class="vendor-card" data-category="lenders" data-animate>
+                        <div class="vendor-card__category">Lender</div>
+                        <h3 class="vendor-card__name">Sound View Mortgage</h3>
+                        <p class="vendor-card__desc">Competitive rates, transparent processes, and personalized financing solutions for Pierce County buyers.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Tacoma</p>
+                            <p><strong>Specialty:</strong> Conventional, FHA, VA loans</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Sound View has consistently delivered for my clients. They respond quickly, explain options clearly, and actually care about finding the right loan fit, not just closing a deal."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="lenders" data-animate>
+                        <div class="vendor-card__category">Lender</div>
+                        <h3 class="vendor-card__name">Pacific Crest Lending</h3>
+                        <p class="vendor-card__desc">Fast pre-approval, competitive rates, and dedicated support throughout the lending journey.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Puyallup</p>
+                            <p><strong>Specialty:</strong> Jumbo loans, cash-out refinance</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Pacific Crest goes above and beyond. Their team understands the Pierce County market and works with me to ensure smooth transactions from offer to close."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="lenders" data-animate>
+                        <div class="vendor-card__category">Lender</div>
+                        <h3 class="vendor-card__name">Cascade Home Finance</h3>
+                        <p class="vendor-card__desc">Flexible terms, responsive service, and a commitment to helping first-time homebuyers succeed.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Gig Harbor</p>
+                            <p><strong>Specialty:</strong> First-time buyer programs, portfolio loans</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Cascade's first-time buyer expertise is outstanding. They take time to educate clients and provide options tailored to their situation."</p>
+                    </div>
+
+                    <!-- INSPECTORS -->
+                    <div class="vendor-card" data-category="inspectors" data-animate>
+                        <div class="vendor-card__category">Inspector</div>
+                        <h3 class="vendor-card__name">Pacific Northwest Home Inspections</h3>
+                        <p class="vendor-card__desc">Thorough evaluations with clear reports and expert guidance on findings and next steps.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Tacoma</p>
+                            <p><strong>Specialty:</strong> Residential, pre-listing inspections</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Their inspections are incredibly detailed and written in plain English, not jargon. My clients feel confident making decisions based on their reports."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="inspectors" data-animate>
+                        <div class="vendor-card__category">Inspector</div>
+                        <h3 class="vendor-card__name">Comprehensive Inspections Plus</h3>
+                        <p class="vendor-card__desc">Expert evaluation of all home systems with comprehensive written reports and recommendations.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Federal Way</p>
+                            <p><strong>Specialty:</strong> Thermal imaging, radon testing</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "The team at Comprehensive is knowledgeable, professional, and always available if buyers have follow-up questions. That's the kind of service I seek out."</p>
+                    </div>
+
+                    <!-- CONTRACTORS -->
+                    <div class="vendor-card" data-category="contractors" data-animate>
+                        <div class="vendor-card__category">Contractor</div>
+                        <h3 class="vendor-card__name">Stellar General Construction</h3>
+                        <p class="vendor-card__desc">Full-service remodeling and repairs with quality craftsmanship and attention to detail on every project.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Tacoma</p>
+                            <p><strong>Specialty:</strong> Kitchen/bath remodels, additions</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Stellar transforms spaces beautifully and stays on budget and timeline. My sellers appreciate the professionalism and homebuyers love the results."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="contractors" data-animate>
+                        <div class="vendor-card__category">Contractor</div>
+                        <h3 class="vendor-card__name">Summit Roofing Solutions</h3>
+                        <p class="vendor-card__desc">Expert roof installation, repair, and maintenance with quality materials and lasting workmanship.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Puyallup</p>
+                            <p><strong>Specialty:</strong> New roofs, repairs, inspections</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Summit provides honest assessments and fair pricing. They've helped countless of my clients address roof concerns with transparency and expertise."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="contractors" data-animate>
+                        <div class="vendor-card__category">Contractor</div>
+                        <h3 class="vendor-card__name">Evergreen Plumbing & Mechanical</h3>
+                        <p class="vendor-card__desc">Professional plumbing and HVAC services for residential properties with responsive, reliable service.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Kent</p>
+                            <p><strong>Specialty:</strong> Water heaters, HVAC, emergency repairs</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Evergreen shows up, diagnoses problems correctly, and fixes them right the first time. That's rare and valuable in the service industry."</p>
+                    </div>
+
+                    <!-- INSURANCE -->
+                    <div class="vendor-card" data-category="insurance" data-animate>
+                        <div class="vendor-card__category">Insurance</div>
+                        <h3 class="vendor-card__name">Homeowner Shield Insurance Group</h3>
+                        <p class="vendor-card__desc">Comprehensive homeowners insurance with personalized coverage and responsive claims service.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Tacoma</p>
+                            <p><strong>Specialty:</strong> Homeowners, umbrella coverage</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Homeowner Shield takes time to understand each client's needs and finds coverage that actually fits. Their claims support is exceptional."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="insurance" data-animate>
+                        <div class="vendor-card__category">Insurance</div>
+                        <h3 class="vendor-card__name">Pacific Northwest Agents Collective</h3>
+                        <p class="vendor-card__desc">Multi-line insurance agency serving Pierce County with expertise and personalized service.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Renton</p>
+                            <p><strong>Specialty:</strong> Home, auto, umbrella policies</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "The team here is knowledgeable about regional risks and helps clients get proper coverage. Great to work with and great for my clients."</p>
+                    </div>
+
+                    <!-- TITLE/ESCROW -->
+                    <div class="vendor-card" data-category="title-escrow" data-animate>
+                        <div class="vendor-card__category">Title/Escrow</div>
+                        <h3 class="vendor-card__name">First Title Escrow Services</h3>
+                        <p class="vendor-card__desc">Efficient escrow handling with clear communication and thorough attention to transaction details.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Tacoma</p>
+                            <p><strong>Specialty:</strong> Residential transactions, title insurance</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "First Title keeps transactions moving smoothly and explains every step clearly. My clients always feel confident and informed with their team."</p>
+                    </div>
+
+                    <div class="vendor-card" data-category="title-escrow" data-animate>
+                        <div class="vendor-card__category">Title/Escrow</div>
+                        <h3 class="vendor-card__name">Cascade Title Company</h3>
+                        <p class="vendor-card__desc">Professional title and escrow services ensuring smooth closings with expertise and attention to detail.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Olympia</p>
+                            <p><strong>Specialty:</strong> Title searches, 1031 exchanges</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Cascade handles complex transactions seamlessly. Their expertise with 1031 exchanges and special situations is invaluable for my clients."</p>
+                    </div>
+
+                    <!-- MOVING -->
+                    <div class="vendor-card" data-category="moving" data-animate>
+                        <div class="vendor-card__category">Moving</div>
+                        <h3 class="vendor-card__name">Smooth Moves Relocation</h3>
+                        <p class="vendor-card__desc">Professional moving services with careful handling, efficient logistics, and customer-focused service.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Federal Way</p>
+                            <p><strong>Specialty:</strong> Residential moves, packing services</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Smooth Moves treats belongings like their own and manages the chaos of moving day with care and professionalism. My clients always recommend them."</p>
+                    </div>
+
+                    <!-- CLEANING -->
+                    <div class="vendor-card" data-category="cleaning" data-animate>
+                        <div class="vendor-card__category">Cleaning</div>
+                        <h3 class="vendor-card__name">Spotless Dwellings Cleaning Co.</h3>
+                        <p class="vendor-card__desc">Thorough cleaning services for move-ins, move-outs, and regular home maintenance with attention to every corner.</p>
+                        <div class="vendor-card__meta">
+                            <p><strong>Location:</strong> Tacoma</p>
+                            <p><strong>Specialty:</strong> Deep cleaning, move-out prep</p>
+                        </div>
+                        <p class="vendor-card__note"><strong>Becca says:</strong> "Spotless Dwellings makes homes shine. Whether it's move-out cleaning or pre-showing prep, they deliver reliable, thorough service every time."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Becca's Vendors Section -->
+        <section class="section section--cream">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Why Becca's Vendors?</h2>
+                </div>
+
+                <div class="grid grid--3">
+                    <div class="glass-card" data-animate>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; color: var(--green-900);">Personally Vetted</h3>
+                        <p>Every vendor on this list has worked directly with Becca and her clients. She knows their work quality, communication style, and commitment to excellence firsthand.</p>
+                    </div>
+
+                    <div class="glass-card" data-animate>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; color: var(--green-900);">Local Expertise</h3>
+                        <p>These professionals understand Pierce County's unique real estate landscape, local regulations, and market conditions. They're invested in the communities they serve.</p>
+                    </div>
+
+                    <div class="glass-card" data-animate>
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; color: var(--green-900);">Client Approved</h3>
+                        <p>Real feedback from real clients backs every recommendation. These vendors consistently deliver professional service, fair pricing, and results that exceed expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vendor Application Section -->
+        <section class="section" id="vendor-application">
+            <div class="container container--narrow">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem;">Join Becca's Preferred Network</h2>
+                    <p style="color: var(--green-700); font-size: 1.1rem;">Are you a quality home service professional in Pierce County? Apply to be part of a trusted vendor network.</p>
+                </div>
+
+                <div class="glass-card" style="padding: 2rem;">
+                    <form id="vendor-form" class="vendor-form">
+                        <div class="form-group">
+                            <label for="business-name">Business Name *</label>
+                            <input type="text" id="business-name" name="businessName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-name">Contact Name *</label>
+                            <input type="text" id="contact-name" name="contactName" required>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="category">Category *</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select a category...</option>
+                                    <option value="lenders">Lenders</option>
+                                    <option value="inspectors">Inspectors</option>
+                                    <option value="contractors">Contractors</option>
+                                    <option value="insurance">Insurance</option>
+                                    <option value="title-escrow">Title/Escrow</option>
+                                    <option value="moving">Moving</option>
+                                    <option value="cleaning">Cleaning</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service-area">Service Area *</label>
+                                <input type="text" id="service-area" name="serviceArea" placeholder="e.g., Pierce County" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website" name="website" placeholder="https://...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="why-include">Why should Becca include your business? *</label>
+                            <textarea id="why-include" name="whyInclude" rows="5" required placeholder="Tell us about your experience, approach, and what makes you different..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--lg btn--block">Submit Application</button>
+                        <div id="form-message" style="margin-top: 1rem; text-align: center; display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner" style="background: linear-gradient(135deg, var(--green-900) 0%, var(--green-800) 100%);">
+            <div class="container">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; color: var(--gold-500);">Need a Recommendation?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 600px;">Becca knows the best professionals in Pierce County. Reach out to discuss your real estate needs and get personalized vendor recommendations.</p>
+                <a href="contact.html" class="btn btn--primary btn--lg">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Your Next Step Home</h3>
+                <p class="footer__desc">Real estate excellence and client care in Pierce County, Washington.</p>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 1rem; font-weight: 600;">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="neighborhoods.html">Neighborhoods</a></li>
+                    <li><a href="assessment.html">Home Assessment</a></li>
+                    <li><a href="vendors.html">Preferred Vendors</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 1rem; font-weight: 600;">Connect</h4>
+                <ul class="footer__links">
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Get Started</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 1rem; font-weight: 600;">Becca Pitts</h4>
+                <p style="margin-bottom: 0.5rem;">Pierce County Real Estate</p>
+                <p style="margin-bottom: 1rem;"><a href="tel:+12534444444" style="text-decoration: none; color: var(--green-700); font-weight: 500;">+1 (253) 444-4444</a></p>
+                <p><a href="mailto:becca@yournextstephome.com" style="text-decoration: none; color: var(--green-700); font-weight: 500;">becca@yournextstephome.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2026 Your Next Step Home. All rights reserved.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="#" style="color: var(--green-700); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
+                <a href="#" style="color: var(--green-700); text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Your Next Step Home",
+        "description": "Real estate agent serving Pierce County, Washington with preferred vendor network",
+        "url": "https://yournextstephome.com",
+        "telephone": "+1-253-444-4444",
+        "email": "becca@yournextstephome.com",
+        "areaServed": {
+            "@type": "City",
+            "name": "Pierce County, WA"
+        },
+        "priceRange": "$$"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://yournextstephome.com/index.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Preferred Vendors",
+                "item": "https://yournextstephome.com/vendors.html"
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        // Mobile Menu Toggle
+        const navToggle = document.querySelector('.nav__toggle');
+        const navMobile = document.querySelector('.nav__mobile');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navMobile.style.display = isExpanded ? 'none' : 'flex';
+            });
+        }
+
+        // Nav Scroll Shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 10) {
+                nav.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Dropdown Menu
+        const dropdownBtns = document.querySelectorAll('.nav__dropdown-btn');
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', !isExpanded);
+                const menu = btn.nextElementSibling;
+                if (menu) {
+                    menu.style.display = isExpanded ? 'none' : 'flex';
+                }
+            });
+        });
+
+        // Vendor Category Filter
+        const filterButtons = document.querySelectorAll('.vendor-filter button');
+        const vendorCards = document.querySelectorAll('.vendor-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                vendorCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.3s ease-in';
+                    } else {
+                        const category = card.getAttribute('data-category');
+                        if (category === filter) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.3s ease-in';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Vendor Form Submission
+        const vendorForm = document.getElementById('vendor-form');
+        const formMessage = document.getElementById('form-message');
+
+        if (vendorForm) {
+            vendorForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    businessName: document.getElementById('business-name').value,
+                    contactName: document.getElementById('contact-name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    category: document.getElementById('category').value,
+                    serviceArea: document.getElementById('service-area').value,
+                    website: document.getElementById('website').value,
+                    whyInclude: document.getElementById('why-include').value
+                };
+
+                const submitBtn = vendorForm.querySelector('button[type="submit"]');
+                submitBtn.classList.add('form-loading');
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch('https://hook.us2.make.com/vendor-placeholder', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        formMessage.className = 'form-success';
+                        formMessage.innerHTML = '<p style="color: var(--green-700); font-weight: 500;">Thank you! Your application has been submitted. Becca will review it and be in touch soon.</p>';
+                        formMessage.style.display = 'block';
+                        vendorForm.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    formMessage.className = 'form-error';
+                    formMessage.innerHTML = '<p style="color: #d32f2f; font-weight: 500;">There was an error submitting your application. Please try again or contact Becca directly.</p>';
+                    formMessage.style.display = 'block';
+                } finally {
+                    submitBtn.classList.remove('form-loading');
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+        // Scroll Animations with IntersectionObserver
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Add fade-in animation if not in CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
