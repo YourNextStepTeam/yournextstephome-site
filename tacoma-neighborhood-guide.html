@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tacoma Neighborhood Guide | Your Next Step Home - Pierce County Real Estate</title>
-    <meta name="description" content="Explore Tacoma's vibrant neighborhoods with our comprehensive guide. Discover Stadium District, Hilltop, North End, and more. Learn about schools, amenities, and the Tacoma real estate market.">
+    <title>Tacoma Neighborhood Guide: Stadium District, Hilltop, Spanaway, Ruston, University Place & More | Your Next Step Home</title>
+    <meta name="description" content="Explore Tacoma's vibrant neighborhoods including Stadium District, Hilltop, Spanaway, North End, Ruston, University Place, and more. Discover schools, amenities, and the Tacoma real estate market.">
     <meta name="keywords" content="Tacoma neighborhoods, Tacoma WA real estate, living in Tacoma, Stadium District, Hilltop, North End Proctor, Tacoma homes">
 
     <!-- Open Graph -->
@@ -69,7 +69,7 @@
                 "name": "What are the best neighborhoods in Tacoma for families?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "North End/Proctor and University Place are top picks for families, with excellent schools, walkable shops, and family-friendly amenities. Hilltop has undergone a major revitalization and offers great value with emerging schools and light rail access. Stadium District provides a more historic, walkable feel with strong schools and community character. Each neighborhood offers something different, so we recommend visiting and seeing which fits your family's lifestyle best."
+                    "text": "North End/Proctor and University Place are top picks for families, with excellent schools, walkable shops, and family-friendly amenities. Ruston offers waterfront living with a tight-knit community feel and great walkability. Hilltop has undergone a major revitalization and offers great value with emerging schools and light rail access. Stadium District provides a more historic, walkable feel with strong schools and community character. Each neighborhood offers something different, so we recommend visiting and seeing which fits your family's lifestyle best."
                 }
             },
             {
@@ -94,7 +94,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -102,35 +102,58 @@
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main">
-        <div class="nav__inner container">
-            <a href="index.html" class="nav__brand">Your Next Step Home</a>
-
-            <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav__inner">
+            <div class="nav__brand">
+                <a href="index.html" aria-label="Your Next Step Home home">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 2L4 12V28H28V12L16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M12 28V18H20V28" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Your Next Step Home</span>
+                </a>
+            </div>
             <ul class="nav__links">
                 <li><a href="index.html">Home</a></li>
                 <li class="nav__dropdown">
-                    <button class="nav__dropdown-btn" aria-label="Neighborhoods submenu">
+                    <button class="nav__dropdown-btn active" aria-haspopup="true" aria-expanded="false">
                         Neighborhoods
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                            <path d="M4 6l4 4 4-4" stroke-width="2" stroke-linecap="round"/>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                     </button>
                     <ul class="nav__dropdown-menu">
-                        <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                        <li><a href="tacoma-neighborhood-guide.html" class="active">Tacoma</a></li>
                         <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                        <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                        <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
+                        <li><a href="milton-edgewood-neighborhood-guide.html">Milton & Edgewood</a></li>
+                        <li><a href="eatonville-graham-neighborhood-guide.html">Eatonville & Graham</a></li>
                     </ul>
                 </li>
                 <li><a href="assessment.html">Assessment</a></li>
                 <li><a href="vendors.html">Vendors</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="get-started.html" class="nav__cta">Get Started</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <a href="assessment.html" class="btn btn--accent btn--sm">Get Started</a>
+            <button class="nav__toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav__mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
+                <li><a href="milton-edgewood-neighborhood-guide.html">Milton & Edgewood</a></li>
+                <li><a href="eatonville-graham-neighborhood-guide.html">Eatonville & Graham</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="assessment.html" class="btn btn--accent btn--block">Get Started</a>
         </div>
     </nav>
 
@@ -189,7 +212,7 @@
             <div class="container container--narrow">
                 <h2>Why Do So Many People Choose Tacoma?</h2>
 
-                <p>Tacoma is undergoing a remarkable transformation. Once known primarily as an industrial hub, the city has evolved into a vibrant, creative community that combines affordability with genuine urban amenities. For homebuyers looking to get more for their money without sacrificing quality of life, Tacoma represents an opportunity that is increasingly rare in the Pacific Northwest.</p>
+                <p>Tacoma is undergoing a remarkable transformation. Once known primarily as an industrial hub, the city has evolved into a vibrant, creative community that combines affordability with genuine urban amenities. For homebuyers looking to get more for their money without sacrificing quality of life, Tacoma represents an opportunity that is increasingly rare in the Pacific Northwest. From urban neighborhoods like Hilltop and the 6th Avenue Corridor to waterfront charm in Ruston and family-focused communities like University Place, and value-oriented options like Spanaway, the greater Tacoma area offers something for every lifestyle.</p>
 
                 <p>The city's waterfront is being reimagined with new parks, public spaces, and mixed-use developments that invite residents and visitors to connect with the water. The arts scene has exploded in recent years, with galleries, theaters, and creative spaces throughout downtown and surrounding neighborhoods. Museums like the Museum of Glass and Tacoma Art Museum draw visitors from across the region, while local artists and entrepreneurs are reshaping entire neighborhoods with galleries, studios, and restaurants.</p>
 
@@ -210,7 +233,7 @@
                         <div class="card__title">Stadium District</div>
                         <div class="card__text">
                             <p>Historic charm meets modern vibrancy in Tacoma's most walkable neighborhood. Tree-lined streets, elegant early-1900s homes, and commanding views of Puget Sound and the Olympics create a classic Pacific Northwest feel. This neighborhood draws people who appreciate architectural history and a strong sense of place.</p>
-                            <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Historic homes, superior views, walkability, excellent schools, locally-owned businesses.</p>
+                            <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Historic homes, superior views, walkability, excellent schools, locally-owned businesses</p>
                         </div>
                     </div>
 
@@ -225,7 +248,7 @@
                     <div class="card" data-animate="fade-left" data-animate-stagger>
                         <div class="card__title">Hilltop</div>
                         <div class="card__text">
-                            <p>Tacoma's revitalization story is written in Hilltop. Once overlooked, this diverse neighborhood is experiencing a renaissance with new restaurants, galleries, light rail access, and genuine affordability. It is the place to watch if you are seeking growth potential and emerging community character.</p>
+                            <p>Tacoma's revitalization story is written in Hilltop. Once overlooked, this diverse neighborhood is experiencing a renaissance with new restaurants, galleries, light rail access, and genuine affordability. It represents the opportunity to watch if you are seeking growth potential and emerging community character.</p>
                             <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Revitalized, diverse community, light rail access, emerging business scene, value pricing.</p>
                         </div>
                     </div>
@@ -247,10 +270,26 @@
                     </div>
 
                     <div class="card" data-animate="fade-right" data-animate-stagger>
+                        <div class="card__title">Ruston</div>
+                        <div class="card__text">
+                            <p>This small waterfront city sits between Tacoma and Point Defiance Park, offering a tight-knit community feel with stunning Puget Sound access. The Point Ruston development has transformed the former ASARCO smelter site into a vibrant mixed-use waterfront destination with restaurants, shops, a movie theater, and waterfront trails. Ruston residents enjoy some of the best views in Pierce County and a walkable lifestyle that feels like a small town despite being minutes from downtown Tacoma.</p>
+                            <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Point Ruston waterfront, Puget Sound views, walkable dining and shopping, Point Defiance Park access, small-city charm.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" data-animate="fade-left" data-animate-stagger>
                         <div class="card__title">University Place</div>
                         <div class="card__text">
-                            <p>The suburban option with character. Residential, tree-filled, and thoughtfully developed, University Place serves families who want excellent schools, lower density, and good access to shopping and amenities. It is quiet without feeling remote, established without feeling stale.</p>
-                            <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Suburban feel, strong schools, Chambers Bay, parks and trails, community-oriented.</p>
+                            <p>University Place (known locally as "UP") is a residential community that borders Tacoma to the southwest. Families are drawn here for the highly rated University Place School District, safe neighborhoods, and access to Chambers Bay Golf Course (home of the 2015 U.S. Open). The Bridgeport Way corridor provides convenient shopping and dining, while Chambers Creek Regional Park offers miles of trails along Puget Sound. UP strikes a balance between suburban comfort and urban accessibility.</p>
+                            <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Top-rated schools, Chambers Bay Golf Course, Chambers Creek trails, family neighborhoods, easy Tacoma/I-5 access.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" data-animate="fade-right" data-animate-stagger>
+                        <div class="card__title">Spanaway</div>
+                        <div class="card__text">
+                            <p>Spanaway is an unincorporated community south of Tacoma that offers some of the most affordable housing in Pierce County. Close to Joint Base Lewis-McChord (JBLM), Spanaway attracts military families and first-time buyers looking for value. Spanaway Lake Park is a local gem for swimming, fishing, and picnics. The area provides easy access to both Tacoma and Puyallup, and for buyers who want to maximize square footage and lot size on a budget, Spanaway is well worth serious consideration.</p>
+                            <p style="font-weight: 600; margin-top: 1.25rem;">Highlights: Affordable housing, JBLM proximity, Spanaway Lake Park, larger lots, first-time buyer friendly, easy Tacoma access.</p>
                         </div>
                     </div>
                 </div>
@@ -455,7 +494,7 @@
                 <p>Let us explore which neighborhood is right for you and find your next home.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                     <a href="assessment.html" class="btn btn--primary">Take Assessment</a>
-                    <a href="contact.html" class="btn btn--secondary">Contact Becca</a>
+                    <a href="index.html#contact" class="btn btn--secondary">Contact Becca</a>
                 </div>
             </div>
         </section>
@@ -475,6 +514,8 @@
                     <ul class="footer__links">
                         <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
                         <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                        <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                        <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
                     </ul>
                 </div>
 
@@ -483,7 +524,7 @@
                     <ul class="footer__links">
                         <li><a href="assessment.html">Assessment</a></li>
                         <li><a href="vendors.html">Vendors</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -492,13 +533,13 @@
                     <ul class="footer__links">
                         <li><a href="mailto:becca@yournextstephome.com">Email</a></li>
                         <li><a href="tel:+12535551234">Call Becca</a></li>
-                        <li><a href="get-started.html">Get Started</a></li>
+                        <li><a href="assessment.html">Get Started</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2026 Your Next Step Home. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+                <p>&copy; 2026 Your Next Step Home. All rights reserved. | Becca Pitts, Realtor</p>
             </div>
         </div>
     </footer>

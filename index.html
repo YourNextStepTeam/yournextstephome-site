@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Next Step Home helps Pierce County homebuyers and sellers navigate real estate with confidence. Local expertise, personalized guidance, and a trusted network from Becca Pitts.">
+    <meta name="description" content="Becca Pitts is a trusted Pierce County real estate agent helping families buy and sell homes in Tacoma, Bonney Lake, Puyallup, and Graham, WA. Take a free home readiness assessment today.">
     <meta name="keywords" content="Pierce County real estate, Tacoma real estate agent, Bonney Lake homes, real estate agent Washington, home buying, selling homes">
     <meta name="author" content="Becca Pitts, Your Next Step Home">
     <meta name="theme-color" content="#1A3009">
@@ -15,36 +15,36 @@
     <meta property="og:image" content="https://yournextstephome.com/og-image.jpg">
     <meta property="og:url" content="https://yournextstephome.com">
 
-    <title>Your Next Step Home | Pierce County Real Estate Agent | Becca Pitts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Pierce County Real Estate Agent | Becca Pitts | Your Next Step Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Load Screen -->
-    <div class="load-screen">
-        <div class="load-screen__text">
-            <div class="load-screen__line">Your next step</div>
-            <div class="load-screen__line">starts here</div>
-        </div>
+    <div class="load-screen" aria-hidden="true">
+        <p class="load-screen__text">Your next step starts here</p>
+        <div class="load-screen__line"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="nav nav--transparent" role="navigation" aria-label="Main navigation">
         <div class="nav__inner">
             <div class="nav__brand">
-                <a href="#" aria-label="Your Next Step Home home">
+                <a href="index.html" aria-label="Your Next Step Home home">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16 2L4 12V28H28V12L16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
                         <path d="M12 28V18H20V28" stroke="currentColor" stroke-width="1.5"/>
                     </svg>
-                    <span>Your Next Step</span>
+                    <span>Your Next Step Home</span>
                 </a>
             </div>
 
             <ul class="nav__links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li class="nav__dropdown">
                     <button class="nav__dropdown-btn" aria-haspopup="true" aria-expanded="false">
                         Neighborhoods
@@ -53,16 +53,20 @@
                         </svg>
                     </button>
                     <ul class="nav__dropdown-menu">
-                        <li><a href="#neighborhoods">Tacoma</a></li>
-                        <li><a href="#neighborhoods">Bonney Lake</a></li>
+                        <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                        <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                        <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                        <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
+                        <li><a href="milton-edgewood-neighborhood-guide.html">Milton & Edgewood</a></li>
+                        <li><a href="eatonville-graham-neighborhood-guide.html">Eatonville & Graham</a></li>
                     </ul>
                 </li>
-                <li><a href="#assessment">Assessment</a></li>
-                <li><a href="#vendors">Trusted Vendors</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button class="btn btn--primary btn--sm">Get Started</button>
+            <a href="assessment.html" class="btn btn--accent btn--sm">Get Started</a>
 
             <button class="nav__toggle" aria-label="Toggle mobile menu" aria-expanded="false">
                 <span></span>
@@ -74,13 +78,18 @@
         <!-- Mobile Menu -->
         <div class="nav__mobile">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#neighborhoods">Neighborhoods</a></li>
-                <li><a href="#assessment">Assessment</a></li>
-                <li><a href="#vendors">Trusted Vendors</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
+                <li><a href="milton-edgewood-neighborhood-guide.html">Milton & Edgewood</a></li>
+                <li><a href="eatonville-graham-neighborhood-guide.html">Eatonville & Graham</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="btn btn--primary btn--block">Get Started</button>
+            <a href="assessment.html" class="btn btn--accent btn--block">Get Started</a>
         </div>
     </nav>
 
@@ -91,95 +100,74 @@
             <div class="hero__inner">
                 <div class="hero__split">
                     <div class="hero__copy" data-animate="fade-left">
-                        <p class="eyebrow">Pierce County Real Estate</p>
-                        <h1>
-                            Your next step
-                            <em>starts here</em>
-                        </h1>
+                        <span class="eyebrow">Pierce County's Trusted Real Estate Guide</span>
+                        <h1>Your Dream Home in Pierce County Is Closer Than You Think</h1>
                         <div class="hero__pain">
-                            <p>Buying or selling a home can feel overwhelming. Between market uncertainty, paperwork, inspections, and the weight of one of life's biggest decisions, it's easy to feel stuck. You need someone in your corner who gets it.</p>
+                            <p>You're scrolling Zillow at midnight, second-guessing every decision, wondering if you're overpaying or missing the perfect home. The fear of making the wrong choice on your biggest investment keeps you up at night. Without expert guidance, you're left spinning, losing bidding wars, and feeling completely overwhelmed.</p>
+                        </div>
+                        <div class="hero__agitate">
+                            <p>The longer you wait without clarity, the more opportunities slip away and the more stress you carry. Every day without a trusted guide costs you confidence and peace of mind.</p>
                         </div>
                         <div class="hero__solution">
-                            <p>That's where I come in. I'm Becca, your Pierce County real estate guide. With years of local expertise and a proven track record, I simplify the process, answer your questions honestly, and make sure you feel confident every step of the way. Let's make this happen together.</p>
+                            <p>I'm Becca Pitts, and I provide clarity, confidence, and a proven process. I'm not just a real estate agent, I'm your guide. I know every Pierce County neighborhood like the back of my hand, and I have the experience of 15+ years and 500+ homes sold. From your first question to closing day, I've got you.</p>
                         </div>
                         <div class="hero__ctas">
-                            <button class="btn btn--primary btn--lg">Take Assessment</button>
-                            <button class="btn btn--outline btn--lg">Contact Becca</button>
+                            <a href="assessment.html" class="btn btn--accent btn--lg">Take the Assessment</a>
+                            <a href="#contact" class="btn btn--white-outline btn--lg">Schedule a Call</a>
                         </div>
                     </div>
                     <div class="hero__photo" data-animate="fade-right">
-                        <div class="hero__photo-placeholder">
-                            <svg width="100%" height="100%" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="400" height="500" fill="var(--green-800)" opacity="0.1"/>
-                                <circle cx="200" cy="150" r="60" fill="var(--gold-500)" opacity="0.2"/>
-                                <rect x="100" y="220" width="200" height="220" fill="var(--gold-500)" opacity="0.15"/>
-                                <text x="200" y="450" text-anchor="middle" fill="var(--green-900)" font-family="Inter" font-size="14" opacity="0.5">
-                                    Becca's Photo
-                                </text>
-                            </svg>
+                        <div class="hero__photo-slides">
+                            <div class="hero__photo-slide active">
+                                <img src="images/becca79.jpg" alt="Becca Pitts, Pierce County real estate agent, professional headshot" loading="eager">
+                            </div>
+                            <div class="hero__photo-slide">
+                                <img src="images/becca-casual.jpg" alt="Becca Pitts, your Pierce County real estate guide" loading="lazy">
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Trust Bar -->
-                <div class="hero__trust" data-animate="scale">
-                    <div class="hero__trust-item">
-                        <div class="hero__trust-number">15+</div>
-                        <div class="hero__trust-label">Years Experience</div>
-                    </div>
-                    <div class="hero__trust-item">
-                        <div class="hero__trust-number">500+</div>
-                        <div class="hero__trust-label">Homes Sold</div>
-                    </div>
-                    <div class="hero__trust-item">
-                        <div class="hero__trust-number">4.9★</div>
-                        <div class="hero__trust-label">Client Rating</div>
-                    </div>
-                    <div class="hero__trust-item">
-                        <div class="hero__trust-number">3</div>
-                        <div class="hero__trust-label">Counties Served</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Work With Becca? Section -->
-        <section class="section" data-animate-stagger>
+        <!-- Trust Bar -->
+        <section class="section section--trust" id="trust-bar">
             <div class="container">
-                <p class="eyebrow text-center">What Makes Us Different</p>
-                <h2 class="text-center">Why work with Becca?</h2>
-
-                <div class="grid grid--3">
-                    <div class="glass-card" data-animate="fade-left">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" stroke="var(--gold-500)" stroke-width="2"/>
-                                <path d="M24 12V24L32 28" stroke="var(--gold-500)" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">Local Expertise</h3>
-                        <p class="card__text">I know Pierce County like the back of my hand. From Tacoma's vibrant neighborhoods to Bonney Lake's suburban charm, I understand what makes each community special and how to navigate its market.</p>
+                <div class="trust-bar">
+                    <div class="trust-bar__item">
+                        <div class="trust-bar__number">15+</div>
+                        <div class="trust-bar__label">Years Experience</div>
                     </div>
-
-                    <div class="glass-card" data-animate="scale">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M24 4L28 14H38L30 20L34 30L24 24L14 30L18 20L10 14H20L24 4Z" fill="var(--gold-500)" opacity="0.3" stroke="var(--gold-500)" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">Personalized Guidance</h3>
-                        <p class="card__text">Your situation is unique, and your real estate strategy should be too. I listen carefully to your goals, concerns, and timeline, then create a customized plan that works for you.</p>
+                    <div class="trust-bar__item">
+                        <div class="trust-bar__number">500+</div>
+                        <div class="trust-bar__label">Homes Sold</div>
                     </div>
+                    <div class="trust-bar__item">
+                        <div class="trust-bar__number">4.9★</div>
+                        <div class="trust-bar__label">Client Rating</div>
+                    </div>
+                    <div class="trust-bar__item">
+                        <div class="trust-bar__number">4</div>
+                        <div class="trust-bar__label">Counties Served</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="glass-card" data-animate="fade-right">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 24C12 17.4 17.4 12 24 12C30.6 12 36 17.4 36 24C36 30.6 30.6 36 24 36C17.4 36 12 30.6 12 24Z" stroke="var(--gold-500)" stroke-width="2"/>
-                                <path d="M20 24L22.5 26.5L29 19.5" stroke="var(--gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">Trusted Network</h3>
-                        <p class="card__text">Real estate doesn't happen in a vacuum. I've built relationships with the best lenders, inspectors, contractors, and service providers. You'll benefit from vetted professionals who care about your outcome.</p>
+        <!-- About Becca Section -->
+        <section class="section section--white" id="about">
+            <div class="container">
+                <div class="split split--reverse">
+                    <div class="split__image" data-animate="fade-left">
+                        <img src="images/becca-casual.jpg" alt="Becca Pitts relaxing, your approachable Pierce County real estate guide" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                    </div>
+                    <div class="split__content" data-animate="fade-right">
+                        <span class="eyebrow">Meet Your Guide</span>
+                        <h2>Who Is Becca Pitts? The Pierce County Agent Who Puts Your Family First</h2>
+                        <p>I grew up in Pierce County and have watched this community evolve. That deep connection, combined with 15+ years of real estate experience and over 500 homes sold, means I know the ins and outs of every neighborhood we serve. But here's what matters most: I understand what it feels like to be in your position. You're not just making a transaction; you're making a life decision.</p>
+                        <p>I believe in transparency, honesty, and putting your needs first. You're the hero of your story, and I'm here to be the guide who provides clarity when everything feels unclear. Whether you're buying your first home, selling a family property, or making a strategic move, I make it smooth and stress-free.</p>
+                        <p>When I'm not helping clients, you'll find me exploring local restaurants, hiking the beautiful trails around the Cascades, or volunteering with community organizations. I'm invested in Pierce County because it's home, and I want to help your family find theirs.</p>
+                        <a href="#contact" class="btn btn--primary btn--lg">Let's Connect</a>
                     </div>
                 </div>
             </div>
@@ -189,10 +177,10 @@
         <section class="section section--cream" id="services">
             <div class="container">
                 <p class="eyebrow text-center">How I Help</p>
-                <h2 class="text-center">Services for every real estate goal</h2>
+                <h2 class="text-center">What Does It Look Like to Work With a Pierce County Real Estate Expert?</h2>
 
-                <div class="grid grid--2">
-                    <div class="card">
+                <div class="grid grid--4" data-animate-stagger>
+                    <div class="card glass-card" data-animate="fade-left">
                         <div class="card__icon">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 28V12L20 6L32 12V28H8Z" stroke="var(--gold-500)" stroke-width="1.5" fill="none"/>
@@ -200,11 +188,10 @@
                             </svg>
                         </div>
                         <h3 class="card__title">Buying</h3>
-                        <p class="card__text">Whether you're a first-time buyer or upgrading, I guide you through the entire process. From finding the right property to closing day, I've got you every step of the way.</p>
-                        <a href="#contact" class="btn btn--ghost btn--sm">Learn More</a>
+                        <p class="card__text">First-time buyer or upgrading? I guide you through every step: finding the right property, navigating offers, inspections, and closing. No surprises, no stress. You'll know exactly what to expect and when to expect it.</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card glass-card" data-animate="scale">
                         <div class="card__icon">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 28V12L20 6L32 12V28H8Z" stroke="var(--gold-500)" stroke-width="1.5" fill="none"/>
@@ -212,22 +199,20 @@
                             </svg>
                         </div>
                         <h3 class="card__title">Selling</h3>
-                        <p class="card__text">Selling? I'll help you price competitively, market strategically, and negotiate confidently. My goal is to get you the best possible outcome in the fastest timeframe.</p>
-                        <a href="#contact" class="btn btn--ghost btn--sm">Learn More</a>
+                        <p class="card__text">Ready to sell? I'll price competitively, market strategically, and negotiate confidently on your behalf. My goal is getting you the best possible outcome in the fastest timeframe without settling.</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card glass-card" data-animate="fade-left">
                         <div class="card__icon">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 14H32M8 14L10 8H30L32 14M8 14V28C8 29.1 8.9 30 10 30H30C31.1 30 32 29.1 32 28V14M14 18V26M20 18V26M26 18V26" stroke="var(--gold-500)" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
                         <h3 class="card__title">Relocation</h3>
-                        <p class="card__text">Moving to Pierce County? I'll help you find the perfect neighborhood and home that fits your lifestyle. Coming from somewhere else? I understand the transition.</p>
-                        <a href="#contact" class="btn btn--ghost btn--sm">Learn More</a>
+                        <p class="card__text">Moving to Pierce County? I'll help you find the perfect neighborhood and home for your lifestyle. Coming from somewhere else? I understand the transition and will make it feel like coming home.</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card glass-card" data-animate="fade-right">
                         <div class="card__icon">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 16L20 8L32 16V30H8V16Z" stroke="var(--gold-500)" stroke-width="1.5" fill="none"/>
@@ -235,71 +220,101 @@
                             </svg>
                         </div>
                         <h3 class="card__title">Investment</h3>
-                        <p class="card__text">Looking to build your real estate portfolio? I specialize in investment property strategy, market analysis, and identifying opportunities that align with your financial goals.</p>
-                        <a href="#contact" class="btn btn--ghost btn--sm">Learn More</a>
+                        <p class="card__text">Building your real estate portfolio? I specialize in investment strategy, market analysis, and identifying opportunities that align with your financial goals. Let's grow your wealth strategically.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Meet Becca Section -->
-        <section class="section">
-            <div class="container">
-                <div class="split split--reverse">
-                    <div class="split__image" data-animate="fade-left">
-                        <div style="aspect-ratio: 3/4; background: linear-gradient(135deg, var(--green-800) 0%, var(--green-700) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                            <svg width="100%" height="100%" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="300" height="400" fill="var(--gold-500)" opacity="0.1"/>
-                                <circle cx="150" cy="100" r="45" fill="var(--gold-500)" opacity="0.2"/>
-                                <rect x="75" y="160" width="150" height="200" fill="var(--gold-500)" opacity="0.15"/>
-                                <text x="150" y="390" text-anchor="middle" fill="var(--gold-300)" font-family="Playfair Display" font-size="18" opacity="0.6">
-                                    Becca
-                                </text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="split__content" data-animate="fade-right">
-                        <p class="eyebrow">Meet Your Guide</p>
-                        <h2>About Becca</h2>
-                        <p>I grew up in Pierce County and have watched this community evolve over the years. That deep connection to the area, combined with over 15 years of real estate experience, means I know the ins and outs of every neighborhood we serve.</p>
-                        <p>But what really drives me is helping people like you navigate one of life's biggest decisions. I believe in transparency, honesty, and putting your needs first. Whether you're buying your first home, selling a family property, or making a strategic investment, I'm here to make it smooth and stress-free.</p>
-                        <p>When I'm not helping clients, you'll find me exploring local restaurants, hiking the beautiful trails around the Cascades, or volunteering with community organizations. I'm invested in Pierce County because it's home.</p>
-                        <p>Let's make your next step the right one.</p>
-                        <button class="btn btn--primary btn--lg">Get to Know Me</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Neighborhood Highlights Section -->
-        <section class="section section--green" id="neighborhoods">
+        <!-- Neighborhoods Section -->
+        <section class="section section--dark-gradient" id="neighborhoods">
             <div class="container">
                 <p class="eyebrow text-center" style="color: var(--gold-300);">Neighborhoods We Serve</p>
-                <h2 class="text-center" style="color: var(--cream);">Where should your next step take you?</h2>
+                <h2 class="text-center" style="color: var(--cream);">Which Pierce County Neighborhood Fits Your Family's Lifestyle?</h2>
+                <p class="text-center" style="color: rgba(255,255,255,0.7); max-width: 640px; margin: 0 auto var(--sp-12);">From Tacoma's urban waterfront to Gig Harbor's charming harbor town, Becca serves families across every corner of Pierce County. Explore our area guides to find the community that fits your life.</p>
 
-                <div class="grid grid--2">
+                <div class="grid grid--2" data-animate-stagger>
                     <div class="glass-card glass-card--dark" data-animate="fade-left">
-                        <h3 class="card__title" style="color: var(--cream);">Tacoma</h3>
-                        <p class="card__text" style="color: var(--cream);">Washington's third-largest city is a vibrant mix of urban energy and waterfront charm. From the historic neighborhoods of Stadium District to the trendy Proctor area, Tacoma offers diverse communities with excellent schools, dining, and culture. The waterfront is experiencing tremendous growth with new development and investment.</p>
-                        <p class="card__text" style="color: var(--cream); font-style: italic; margin-bottom: 1.5rem;">Price Range: $300K - $650K+</p>
-                        <a href="#contact" class="btn btn--accent">Explore Tacoma</a>
+                        <h3 class="card__title" style="color: var(--cream);">Tacoma, Ruston, and University Place</h3>
+                        <p class="card__text" style="color: var(--cream);">Washington's vibrant third-largest city and its neighboring communities offer urban energy, waterfront charm, and top-rated schools. From Stadium District's historic homes to University Place's family neighborhoods and Ruston's stunning Point Defiance waterfront, the greater Tacoma area has something for everyone.</p>
+                        <p class="card__text" style="color: var(--gold-200); font-style: italic; margin-bottom: 1.5rem;">Price Range: $300K - $750K+</p>
+                        <a href="tacoma-neighborhood-guide.html" class="btn btn--accent">Explore Tacoma Area</a>
                     </div>
 
                     <div class="glass-card glass-card--dark" data-animate="fade-right">
-                        <h3 class="card__title" style="color: var(--cream);">Bonney Lake</h3>
-                        <p class="card__text" style="color: var(--cream);">Just south of Tacoma, Bonney Lake offers a more suburban feel while maintaining convenient access to urban amenities. Known for excellent schools, family-friendly parks, and the stunning mountain views, this community is perfect for families seeking a quieter lifestyle without sacrificing opportunity.</p>
-                        <p class="card__text" style="color: var(--cream); font-style: italic; margin-bottom: 1.5rem;">Price Range: $280K - $550K+</p>
-                        <a href="#contact" class="btn btn--accent">Explore Bonney Lake</a>
+                        <h3 class="card__title" style="color: var(--cream);">Bonney Lake, Lake Tapps, Edgewood, and Eatonville</h3>
+                        <p class="card__text" style="color: var(--cream);">East Pierce County offers everything from lakefront living at Lake Tapps to small-town charm in Eatonville near Mount Rainier. Bonney Lake and Edgewood deliver excellent schools, family-friendly parks, and stunning mountain views in a quieter setting.</p>
+                        <p class="card__text" style="color: var(--gold-200); font-style: italic; margin-bottom: 1.5rem;">Price Range: $250K - $600K+</p>
+                        <a href="bonney-lake-neighborhood-guide.html" class="btn btn--accent">Explore East Pierce County</a>
+                    </div>
+
+                    <div class="glass-card glass-card--dark" data-animate="fade-left">
+                        <h3 class="card__title" style="color: var(--cream);">Puyallup and Frederickson</h3>
+                        <p class="card__text" style="color: var(--cream);">Home to the famous Washington State Fair and the top-rated Puyallup School District, the Puyallup area offers charming downtown shops, South Hill's family neighborhoods, and Frederickson's growing community with competitive pricing.</p>
+                        <p class="card__text" style="color: var(--gold-200); font-style: italic; margin-bottom: 1.5rem;">Price Range: $350K - $600K+</p>
+                        <a href="puyallup-neighborhood-guide.html" class="btn btn--accent">Explore Puyallup Area</a>
+                    </div>
+
+                    <div class="glass-card glass-card--dark" data-animate="fade-right">
+                        <h3 class="card__title" style="color: var(--cream);">Gig Harbor and the Peninsula</h3>
+                        <p class="card__text" style="color: var(--cream);">One of Pierce County's most desirable communities, combining a charming waterfront downtown with the Peninsula School District (one of the best in the state). From luxury waterfront estates to family-friendly neighborhoods in Purdy and the Key Peninsula.</p>
+                        <p class="card__text" style="color: var(--gold-200); font-style: italic; margin-bottom: 1.5rem;">Price Range: $400K - $1.2M+</p>
+                        <a href="gig-harbor-neighborhood-guide.html" class="btn btn--accent">Explore Gig Harbor</a>
+                    </div>
+
+                    <div class="glass-card glass-card--dark" data-animate="fade-left">
+                        <h3 class="card__title" style="color: var(--cream);">Milton and Edgewood</h3>
+                        <p class="card__text" style="color: var(--cream);">Two charming small cities with tight-knit communities and convenient locations. Milton straddles the Pierce/King County border with easy commute access, while Edgewood offers larger lots, rural character, and Puyallup School District access.</p>
+                        <p class="card__text" style="color: var(--gold-200); font-style: italic; margin-bottom: 1.5rem;">Price Range: $400K - $600K+</p>
+                        <a href="milton-edgewood-neighborhood-guide.html" class="btn btn--accent">Explore Milton & Edgewood</a>
+                    </div>
+
+                    <div class="glass-card glass-card--dark" data-animate="fade-right">
+                        <h3 class="card__title" style="color: var(--cream);">Eatonville and Graham</h3>
+                        <p class="card__text" style="color: var(--cream);">Rural charm, affordable acreage, and Pierce County's gateway to Mount Rainier. Graham offers growing subdivisions and equestrian properties, while Eatonville delivers genuine small-town living near Northwest Trek Wildlife Park.</p>
+                        <p class="card__text" style="color: var(--gold-200); font-style: italic; margin-bottom: 1.5rem;">Price Range: $250K - $500K+</p>
+                        <a href="eatonville-graham-neighborhood-guide.html" class="btn btn--accent">Explore Eatonville & Graham</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Promo Section -->
+        <section class="section assessment-promo" id="assessment">
+            <div class="container">
+                <div class="assessment-promo__split">
+                    <div class="assessment-promo__card" data-animate="fade-left">
+                        <div class="assessment-promo__cover">
+                            <div class="assessment-promo__cover-inner">
+                                <span class="assessment-promo__badge">Free Assessment</span>
+                                <h3 style="color: var(--gold-500); font-size: 1.5rem; margin: 1rem 0;">Ready for Your Next Step?</h3>
+                                <p style="color: var(--gold-200); font-size: 0.95rem;">Discover your home readiness score in 12 quick questions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="assessment-promo__content" data-animate="fade-right">
+                        <h2 style="color: var(--cream);">Not Sure If You're Ready to Buy or Sell? Take the Free Assessment</h2>
+                        <p style="color: var(--cream);">Our 12-question home readiness assessment is designed to give you clarity. You'll discover where you stand in today's market, what your timeline should realistically be, and exactly what to focus on next. No obligation, no pressure. Just honest insight tailored to your situation.</p>
+                        <div style="margin-top: 2rem;">
+                            <h4 style="color: var(--gold-300); margin-bottom: 1rem;">You'll Learn:</h4>
+                            <ul style="color: var(--cream); list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">Your true market readiness score</li>
+                                <li style="margin-bottom: 0.75rem;">Whether now is the right time to buy or sell</li>
+                                <li style="margin-bottom: 0.75rem;">What your neighborhood offers at your price point</li>
+                                <li style="margin-bottom: 0.75rem;">Personalized next steps based on your situation</li>
+                            </ul>
+                        </div>
+                        <a href="assessment.html" class="btn btn--accent btn--lg" style="margin-top: 2rem;">Start Your Free Assessment</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section class="section" data-animate-stagger>
+        <section class="section section--white" data-animate-stagger>
             <div class="container">
-                <p class="eyebrow text-center">What Clients Say</p>
-                <h2 class="text-center">Real stories from real clients</h2>
+                <p class="eyebrow text-center">What Do Pierce County Families Say</p>
+                <h2 class="text-center">What Do Pierce County Families Say After Working With Becca?</h2>
 
                 <div class="grid grid--3">
                     <div class="testimonial glass-card" data-animate="fade-left">
@@ -374,20 +389,11 @@
             </div>
         </section>
 
-        <!-- Assessment CTA Banner -->
-        <section class="cta-banner" id="assessment">
-            <div class="container">
-                <h2>Ready to figure out your next step?</h2>
-                <p>Whether you're thinking about buying, selling, or relocating, our personalized assessment will help clarify your goals and show you exactly what to expect.</p>
-                <button class="btn btn--accent btn--lg">Start Your Assessment</button>
-            </div>
-        </section>
-
         <!-- FAQ Section -->
-        <section class="section" id="faq">
+        <section class="section section--white" id="faq">
             <div class="container container--narrow">
                 <p class="eyebrow text-center">Questions Answered</p>
-                <h2 class="text-center">Frequently asked questions about Pierce County real estate</h2>
+                <h2 class="text-center">Common Questions About Buying and Selling Homes in Pierce County, WA</h2>
 
                 <div style="max-width: 600px; margin: 3rem auto 0;">
                     <div class="faq-item">
@@ -457,20 +463,20 @@
         <section class="section section--cream" id="contact">
             <div class="container container--narrow">
                 <div class="glass-card" style="border: 1px solid var(--green-900); background: rgba(255, 255, 255, 0.7);">
-                    <h2 class="text-center">Let's talk about your next step</h2>
+                    <h2 class="text-center">Ready to Start Your Pierce County Home Search?</h2>
                     <p class="text-center" style="margin-bottom: 2.5rem; color: var(--green-900);">Ready to get started? Reach out and let's discuss your real estate goals. No pressure, no sales pitch, just honest conversation.</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
                         <div style="text-align: center;">
-                            <h4 style="color: var(--green-900); margin-bottom: 0.5rem; font-family: 'Playfair Display'; font-size: 1.1rem; font-weight: 600;">Phone</h4>
+                            <h4 style="color: var(--green-900); margin-bottom: 0.5rem; font-family: 'DM Serif Display'; font-size: 1.1rem; font-weight: 600;">Phone</h4>
                             <a href="tel:+12535555555" style="color: var(--gold-500); text-decoration: none; font-weight: 500;">(253) 555-5555</a>
                         </div>
                         <div style="text-align: center;">
-                            <h4 style="color: var(--green-900); margin-bottom: 0.5rem; font-family: 'Playfair Display'; font-size: 1.1rem; font-weight: 600;">Email</h4>
+                            <h4 style="color: var(--green-900); margin-bottom: 0.5rem; font-family: 'DM Serif Display'; font-size: 1.1rem; font-weight: 600;">Email</h4>
                             <a href="mailto:becca@yournextstephome.com" style="color: var(--gold-500); text-decoration: none; font-weight: 500;">becca@yournextstephome.com</a>
                         </div>
                         <div style="text-align: center;">
-                            <h4 style="color: var(--green-900); margin-bottom: 0.5rem; font-family: 'Playfair Display'; font-size: 1.1rem; font-weight: 600;">Service Areas</h4>
+                            <h4 style="color: var(--green-900); margin-bottom: 0.5rem; font-family: 'DM Serif Display'; font-size: 1.1rem; font-weight: 600;">Service Areas</h4>
                             <p style="color: var(--green-900); margin: 0; font-size: 0.95rem;">Tacoma, Bonney Lake, surrounding Pierce County</p>
                         </div>
                     </div>
@@ -502,9 +508,9 @@
                     <div class="footer__links">
                         <h4>Navigate</h4>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#neighborhoods">Neighborhoods</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="tacoma-neighborhood-guide.html">Neighborhoods</a></li>
+                            <li><a href="assessment.html">Assessment</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
@@ -512,10 +518,10 @@
                     <div class="footer__links">
                         <h4>Services</h4>
                         <ul>
-                            <li><a href="#services">Buying</a></li>
-                            <li><a href="#services">Selling</a></li>
-                            <li><a href="#services">Relocation</a></li>
-                            <li><a href="#services">Investment</a></li>
+                            <li><a href="vendors.html">Vendors</a></li>
+                            <li><a href="assessment.html">Assessment</a></li>
+                            <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -671,14 +677,16 @@
         navToggle.addEventListener('click', function() {
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', !isExpanded);
-            navMobile.style.display = isExpanded ? 'none' : 'block';
+            navToggle.classList.toggle('active');
+            navMobile.classList.toggle('active');
         });
 
         // Close mobile menu when link is clicked
         document.querySelectorAll('.nav__mobile a, .nav__mobile button').forEach(link => {
             link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
+                navMobile.classList.remove('active');
                 navToggle.setAttribute('aria-expanded', 'false');
-                navMobile.style.display = 'none';
             });
         });
 
@@ -717,20 +725,20 @@
 
         faqQuestions.forEach(question => {
             question.addEventListener('click', function() {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                const answerId = this.getAttribute('aria-controls');
-                const answer = document.getElementById(answerId);
+                const faqItem = this.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
 
-                this.setAttribute('aria-expanded', !isExpanded);
-                answer.style.display = isExpanded ? 'none' : 'block';
-
-                faqQuestions.forEach(q => {
-                    if (q !== this) {
-                        q.setAttribute('aria-expanded', 'false');
-                        const id = q.getAttribute('aria-controls');
-                        document.getElementById(id).style.display = 'none';
-                    }
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 });
+
+                // Toggle current
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                }
             });
         });
 
@@ -803,6 +811,17 @@
                 });
             }
         });
+
+        // Hero Photo Slideshow
+        const slides = document.querySelectorAll('.hero__photo-slide');
+        if (slides.length > 1) {
+            let current = 0;
+            setInterval(() => {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 5000);
+        }
     </script>
 </body>
 </html>

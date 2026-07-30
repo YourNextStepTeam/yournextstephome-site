@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" role="img" aria-label="Your Next Step Home, Real Estate Broker">
+  <title>Your Next Step Home (reversed)</title>
+  <desc>Reversed logo for dark backgrounds: cream house silhouette with transparent door cutout, white wordmark, gold tracked subtitle</desc>
+  <g transform="translate(48, 50)">
+    <path fill="#FDFBF7" fill-rule="evenodd" d="M 65 0 L 130 55 L 130 110 Q 130 120 120 120 L 10 120 Q 0 120 0 110 L 0 55 Z M 52 76 L 78 76 L 78 120 L 52 120 Z"/>
+  </g>
+  <text x="220" y="108" font-family="'Playfair Display', Georgia, serif" font-size="50" font-weight="700" fill="#FDFBF7">Your Next Step Home</text>
+  <text x="222" y="148" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="6" fill="#D4A843">REAL ESTATE BROKER</text>
+</svg>
