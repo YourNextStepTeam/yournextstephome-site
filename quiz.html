@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take the free Pierce County Real Estate IQ quiz. Six real scenarios on buying and selling homes in Tacoma, Bonney Lake, Puyallup, and beyond. Get your results plus a free home prep checklist.">
+    <meta name="keywords" content="real estate quiz, Pierce County home buying quiz, home selling IQ, Tacoma real estate quiz">
+    <meta name="author" content="Becca Pitts, Your Next Step Home">
+    <meta name="theme-color" content="#1A3009">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pierce County Real Estate IQ Quiz | Your Next Step Home">
+    <meta property="og:description" content="Six scenarios. Pick what you'd do. See what actually happens in Pierce County real estate.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yournextstephome.com/og-image.jpg">
+    <meta property="og:url" content="https://yournextstephome.com/quiz.html">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yournextstephome.com/quiz.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%232D5016' width='32' height='32'/><path fill='%23D4A843' d='M16 4l8 6v14H8V10l8-6z'/></svg>">
+
+    <title>Pierce County Real Estate IQ Quiz | Your Next Step Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="quiz-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav nav--transparent" role="navigation" aria-label="Main navigation">
+        <div class="nav__inner">
+            <div class="nav__brand">
+                <a href="index.html" aria-label="Your Next Step Home home">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 2L4 12V28H28V12L16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M12 28V18H20V28" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Your Next Step Home</span>
+                </a>
+            </div>
+
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="for-sellers.html">Sellers</a></li>
+                <li><a href="for-buyers.html">Buyers</a></li>
+                <li class="nav__dropdown">
+                    <button class="nav__dropdown-btn" aria-haspopup="true" aria-expanded="false">
+                        Neighborhoods
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <ul class="nav__dropdown-menu">
+                        <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                        <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                        <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                        <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
+                        <li><a href="milton-edgewood-neighborhood-guide.html">Milton & Edgewood</a></li>
+                        <li><a href="eatonville-graham-neighborhood-guide.html">Eatonville & Graham</a></li>
+                    </ul>
+                </li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="tel:+12535555555">(253) 555-5555</a></li>
+            </ul>
+
+            <a href="assessment.html" class="btn btn--accent btn--sm">Get Started</a>
+
+            <button class="nav__toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="nav__mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="for-sellers.html">Sellers</a></li>
+                <li><a href="for-buyers.html">Buyers</a></li>
+                <li><a href="tacoma-neighborhood-guide.html">Tacoma</a></li>
+                <li><a href="bonney-lake-neighborhood-guide.html">Bonney Lake</a></li>
+                <li><a href="puyallup-neighborhood-guide.html">Puyallup</a></li>
+                <li><a href="gig-harbor-neighborhood-guide.html">Gig Harbor</a></li>
+                <li><a href="milton-edgewood-neighborhood-guide.html">Milton & Edgewood</a></li>
+                <li><a href="eatonville-graham-neighborhood-guide.html">Eatonville & Graham</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="tel:+12535555555">Call: (253) 555-5555</a></li>
+            </ul>
+            <a href="assessment.html" class="btn btn--accent btn--block">Get Started</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="quiz-shell">
+
+            <!-- Lead Gate -->
+            <div class="quiz-gate" id="quiz-gate">
+                <span class="quiz-badge">Pierce County Real Estate IQ Check</span>
+                <h1>Think Buying or Selling a Home Is "Not That Hard?"</h1>
+                <p class="quiz-gate__sub">Six scenarios. Pick what you'd do. See what happens.</p>
+
+                <form class="quiz-form" id="quiz-lead-form" novalidate>
+                    <div class="form-success" id="quiz-form-success">
+                        <p>Thanks! Let's see how you do.</p>
+                    </div>
+                    <div class="form-error" id="quiz-form-error">
+                        <p>Something went wrong sending your info, but let's keep going, your quiz will still work.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="quiz-first-name">First Name</label>
+                        <input type="text" id="quiz-first-name" name="firstName" placeholder="Jane" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quiz-last-name">Last Name</label>
+                        <input type="text" id="quiz-last-name" name="lastName" placeholder="Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quiz-email">Email</label>
+                        <input type="email" id="quiz-email" name="email" placeholder="jane@email.com" required>
+                    </div>
+                    <button type="submit" class="btn btn--accent btn--lg btn--block" id="quiz-lead-submit">Let's Go &rarr;</button>
+                    <p class="quiz-form__note">Your email gets you your results plus our Pierce County Home Prep Checklist.</p>
+                </form>
+            </div>
+
+            <!-- Quiz Flow -->
+            <div class="quiz-flow" id="quiz-flow">
+                <div class="quiz-progress">
+                    <div class="quiz-progress__bar">
+                        <div class="quiz-progress__fill" id="quiz-progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <span class="quiz-progress__label" id="quiz-progress-label">Question 1 of 6</span>
+                </div>
+                <div id="quiz-card-container"></div>
+            </div>
+
+            <!-- Results -->
+            <div class="quiz-flow" id="quiz-results">
+                <div class="quiz-results">
+                    <h2 id="quiz-results-name">Nice Work</h2>
+                    <div class="quiz-results__score" id="quiz-results-score">
+                        <span id="quiz-results-score-num">0/6</span>
+                        <small>Correct</small>
+                    </div>
+                    <p id="quiz-results-message">Real estate is full of moments like these, and most of them are a lot more expensive to get wrong than a quiz question.</p>
+                    <div class="hero__ctas" style="justify-content: center;">
+                        <a href="assessment.html" class="btn btn--accent btn--lg">Book Your Free Assessment</a>
+                        <a href="index.html" class="btn btn--white-outline btn--lg">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // ── Nav behavior ──
+        const navToggle = document.querySelector('.nav__toggle');
+        const navMobile = document.querySelector('.nav__mobile');
+        const navElement = document.querySelector('.nav');
+
+        navToggle.addEventListener('click', function() {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navToggle.classList.toggle('active');
+            navMobile.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav__mobile a').forEach(link => {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
+                navMobile.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navElement.classList.add('nav--scrolled');
+                navElement.classList.remove('nav--transparent');
+            } else {
+                navElement.classList.remove('nav--scrolled');
+                navElement.classList.add('nav--transparent');
+            }
+        });
+        const dropdownBtn = document.querySelector('.nav__dropdown-btn');
+        const dropdownMenu = document.querySelector('.nav__dropdown-menu');
+        if (dropdownBtn) {
+            dropdownBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
+                dropdownBtn.setAttribute('aria-expanded', !isExpanded);
+                dropdownMenu.style.display = isExpanded ? 'none' : 'block';
+            });
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav__dropdown')) {
+                    dropdownBtn.setAttribute('aria-expanded', 'false');
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+        }
+
+        // ── Quiz Data ──
+        const quizScenarios = [
+            {
+                question: "Your Tacoma home's Zestimate says $420K. Your neighbor just sold for $455K. What do you do?",
+                choices: [
+                    "List at $420K to sell fast, since that's what the app says it's worth",
+                    "Get a real comparative market analysis before setting any price",
+                    "Split the difference and list at $437K"
+                ],
+                correct: 1,
+                explanation: "Zestimates are automated estimates, often off by tens of thousands of dollars in either direction. A real comparative market analysis looks at actual recent sales, condition, upgrades, and current buyer demand in your exact neighborhood. Pricing off an app alone can leave real money on the table."
+            },
+            {
+                question: "You're buying and the inspection found a cracked foundation. What's your next move?",
+                choices: [
+                    "Walk away from the deal immediately, no house is worth that risk",
+                    "Ignore it, most cracks are cosmetic anyway",
+                    "Get a structural engineer's opinion, then negotiate repairs or a price credit"
+                ],
+                correct: 2,
+                explanation: "Not all foundation cracks are dealbreakers, but you shouldn't guess. A licensed structural engineer can tell you if it's cosmetic settling or a real structural issue. From there, your agent negotiates either a repair, a price credit, or, if it's serious, an exit from the contract."
+            },
+            {
+                question: "You receive 3 offers on day one. One is $10K over asking with an escalation clause. What do you do?",
+                choices: [
+                    "Automatically accept it, it's the highest number on paper",
+                    "Compare all terms, not just price: financing, contingencies, and closing timeline",
+                    "Ask all three buyers to keep raising their offers indefinitely"
+                ],
+                correct: 1,
+                explanation: "The highest price doesn't always win. An escalation clause with shaky financing or a long list of contingencies can fall apart before closing. A skilled agent compares the full picture, price, financing strength, contingencies, and timeline, to find the offer most likely to actually close."
+            },
+            {
+                question: "The appraisal comes in $25K below your accepted offer. What happens next?",
+                choices: [
+                    "The deal automatically falls apart, nothing can be done",
+                    "You have options: renegotiate the price, challenge the appraisal, or bring extra cash to close",
+                    "You're legally required to pay the original price no matter what"
+                ],
+                correct: 1,
+                explanation: "A low appraisal isn't the end of the deal. Buyers and sellers can renegotiate the sale price, the buyer can appeal or challenge the appraisal with additional comps, or the buyer can choose to cover the gap in cash. The right move depends on the market and how badly each side wants the deal to close."
+            },
+            {
+                question: "You're relocating from California. A listing agent offers to \"represent both sides.\" Should you accept?",
+                choices: [
+                    "Yes, it saves time and simplifies the paperwork",
+                    "Be cautious. Dual agency means no one is fully advocating for just you",
+                    "It doesn't matter who represents you as a buyer"
+                ],
+                correct: 1,
+                explanation: "In dual agency, the same agent represents both the buyer and the seller, which means no one is negotiating purely in your interest. Especially when relocating from out of state and unfamiliar with the local market, having your own dedicated buyer's agent protects your interests exclusively."
+            },
+            {
+                question: "You want to sell but your home needs $15K in repairs. Should you fix everything first?",
+                choices: [
+                    "Yes, always complete every repair before listing, no exceptions",
+                    "No, skip repairs entirely and just price it lower",
+                    "Get expert guidance on which repairs actually impact price, and skip the rest"
+                ],
+                correct: 2,
+                explanation: "Not every repair delivers a return. Some fixes (like a leaking roof or broken HVAC) matter enormously to buyers and appraisers. Others (like cosmetic updates in a room buyers plan to renovate anyway) rarely pay for themselves. The smart move is targeted repairs guided by what actually affects your sale price."
+            }
+        ];
+
+        let currentScenario = 0;
+        let correctCount = 0;
+        let leadInfo = { firstName: '', lastName: '', email: '' };
+
+        // ── Lead Form Submission ──
+        const leadForm = document.getElementById('quiz-lead-form');
+        const quizGate = document.getElementById('quiz-gate');
+        const quizFlow = document.getElementById('quiz-flow');
+        const quizResults = document.getElementById('quiz-results');
+
+        leadForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            leadInfo.firstName = document.getElementById('quiz-first-name').value.trim();
+            leadInfo.lastName = document.getElementById('quiz-last-name').value.trim();
+            leadInfo.email = document.getElementById('quiz-email').value.trim();
+
+            if (!leadInfo.firstName || !leadInfo.lastName || !leadInfo.email) {
+                return;
+            }
+
+            const submitBtn = document.getElementById('quiz-lead-submit');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Loading...';
+
+            try {
+                await fetch('https://hook.us2.make.com/placeholder', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstName: leadInfo.firstName,
+                        lastName: leadInfo.lastName,
+                        email: leadInfo.email,
+                        source: 'Pierce County Real Estate IQ Quiz'
+                    })
+                });
+            } catch (error) {
+                console.error('Quiz lead submission error:', error);
+            }
+
+            // Proceed to quiz regardless of webhook success, don't block the experience
+            quizGate.style.display = 'none';
+            quizFlow.classList.add('active');
+            loadScenario(0);
+        });
+
+        // ── Quiz Flow Rendering ──
+        const cardContainer = document.getElementById('quiz-card-container');
+        const progressFill = document.getElementById('quiz-progress-fill');
+        const progressLabel = document.getElementById('quiz-progress-label');
+
+        function loadScenario(index) {
+            const scenario = quizScenarios[index];
+            progressFill.style.width = `${(index / quizScenarios.length) * 100}%`;
+            progressLabel.textContent = `Question ${index + 1} of ${quizScenarios.length}`;
+
+            cardContainer.innerHTML = `
+                <div class="quiz-card">
+                    <h2>${scenario.question}</h2>
+                    <div class="quiz-choices" id="quiz-choices"></div>
+                    <div class="quiz-explanation" id="quiz-explanation">
+                        <p class="quiz-explanation__label">What Actually Happens</p>
+                        <p>${scenario.explanation}</p>
+                    </div>
+                    <div class="quiz-next" id="quiz-next" style="display: none;">
+                        <button class="btn btn--accent" id="quiz-next-btn">
+                            ${index === quizScenarios.length - 1 ? 'See My Results' : 'Next Question'} &rarr;
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const choicesContainer = document.getElementById('quiz-choices');
+            scenario.choices.forEach((choiceText, choiceIndex) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-choice';
+                btn.type = 'button';
+                btn.textContent = choiceText;
+                btn.addEventListener('click', function() {
+                    handleAnswer(choiceIndex, scenario);
+                });
+                choicesContainer.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(selectedIndex, scenario) {
+            const allChoices = document.querySelectorAll('.quiz-choice');
+            allChoices.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === scenario.correct) {
+                    btn.classList.add('correct');
+                } else if (i === selectedIndex) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            if (selectedIndex === scenario.correct) {
+                correctCount++;
+            }
+
+            document.getElementById('quiz-explanation').classList.add('show');
+            document.getElementById('quiz-next').style.display = 'block';
+
+            document.getElementById('quiz-next-btn').addEventListener('click', function() {
+                currentScenario++;
+                if (currentScenario < quizScenarios.length) {
+                    loadScenario(currentScenario);
+                } else {
+                    showResults();
+                }
+            }, { once: true });
+        }
+
+        function showResults() {
+            progressFill.style.width = '100%';
+            progressLabel.textContent = `Question ${quizScenarios.length} of ${quizScenarios.length}`;
+            quizFlow.classList.remove('active');
+            quizResults.classList.add('active');
+
+            document.getElementById('quiz-results-name').textContent = leadInfo.firstName
+                ? `Nice Work, ${leadInfo.firstName}`
+                : 'Nice Work';
+            document.getElementById('quiz-results-score-num').textContent = `${correctCount}/${quizScenarios.length}`;
+
+            let message = '';
+            if (correctCount >= 5) {
+                message = "You clearly pay attention to how this market really works. Even sharp buyers and sellers benefit from a local guide who can catch the details that don't show up in a quiz, or on Zillow.";
+            } else if (correctCount >= 3) {
+                message = "You've got solid instincts, but a couple of these scenarios cost real buyers and sellers real money every year. A quick conversation can close the gap before it costs you.";
+            } else {
+                message = "These scenarios trip up more people than you'd think, and in real life, they come with a much bigger price tag than a quiz question. Let's talk before you make your next move.";
+            }
+            document.getElementById('quiz-results-message').textContent = message;
+        }
+    </script>
+</body>
+</html>
